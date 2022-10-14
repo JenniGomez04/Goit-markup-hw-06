@@ -180,7 +180,7 @@ subrayado*/
   }
 
   .backdrop {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -305,7 +305,7 @@ label .button_form{
 .box_form svg:focus {
   fill: #2196F3;
   stroke: #2196F3;
- 
+
 }
 
 
