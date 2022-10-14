@@ -29,7 +29,7 @@
           <ul>
             <li class="item"><a href="index.html" class="link">Estudio</a></li>
             <li class="item">
-              <a href="portfolio.html" class="link">Portafolio</a>
+              <a href="portfolio.html" class="link active">Portafolio</a>
             </li>
             <li class="item"><a href="#" class="link">Contacto</a></li>
           </ul>
@@ -424,10 +424,16 @@
       <div class="subscription">
         <h3>SUSCRIBASE AL BOLETIN INFORMATIVO</h3>
         <form name="subscription_footer">
-          <label>
-            <input class = "email_footer" type="email" name="email" placeholder="Correo electrónico"/>
+          <label for="mail_footer">
+            <input
+              class="email_footer"
+              type="email"
+              name="email"
+              id="mail_footer"
+              placeholder=" Correo electrónico"
+            />
           </label>
-          <button class = "submit_footer" type="submit" name="suscribe">
+          <button class="submit_footer" type="submit" name="suscribe">
             Suscríbase
             <svg class="icon subscription-icono" width="24" height="24">
               <use

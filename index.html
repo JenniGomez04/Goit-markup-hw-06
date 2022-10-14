@@ -42,10 +42,10 @@
 
       <div class = "form">
         <h3>Deje sus datos, nos contactaremos con usted</h3>
-        
+
         <form class="order_form">
 
-          <label class = "form_label" for="name_modal"> Nombre 
+          <label class = "form_label" for="name_modal"> Nombre
             <div class="box_form" >
             <svg class="icon icon-name" width="12" height="12">
               <use
@@ -56,7 +56,7 @@
         </div>
       </label>
 
-        
+
         <label class = form_label for="phone_modal">Teléfono
         <div class="box_form">
             <svg class="icon icon-phone" width="13" height="13">
@@ -81,20 +81,20 @@
 
       <label class = form_label for="menssage_modal">Comentarios
         <div class="box_form">
-            <input class = "vent_modal" type="text" name="message" placeholder="Introduzca el texto" id="menssage_modal">
+          <textarea name = "menssage" rows = "10" cols="30" id= "menssage_modal" placeholder="Introduzca el texto"></textarea>
         </div>
       </label>
 
-
-
         <div class="acept">
-          <input type="checkbox" name="terminos" required>
+          <input type="checkbox" name="terminos" id="submit" required>
           <label for="submit" class="form_label" >Estoy de acuerdo con el boletín informativo y acepto los Términos y Condiciones</label>
       </div>
 
-      <label for="buttomForm">
-        <input type="submit" class="buttom_Form" value="Enviar" id="buttomForm">
+      <div class = "for_button">
+      <label for="buttonform">
+        <input type="submit" class="button_form" value="Enviar" id="buttonform">
     </label>
+  </div>
 
 
         </form>
@@ -106,7 +106,7 @@
         <div class="left">
           <div class="logo"><a href="#">WebStudio</a></div>
           <ul>
-            <li class="item"><a href="index.html" class="link">Estudio</a></li>
+            <li class="item"><a href="index.html" class="link active">Estudio</a></li>
             <li class="item">
               <a href="portfolio.html" class="link">Portafolio</a>
             </li>
@@ -951,8 +951,8 @@
       <div class="subscription">
         <h3>SUSCRIBASE AL BOLETIN INFORMATIVO</h3>
         <form name="subscription_footer">
-          <label>
-            <input class = "email_footer" type="email" name="email" placeholder=" Correo electrónico"/>
+          <label for="mail_footer">
+            <input class = "email_footer" type="email" name="email" id="mail_footer" placeholder=" Correo electrónico"/>
           </label>
           <button class = "submit_footer" type="submit" name="suscribe">
             Suscríbase

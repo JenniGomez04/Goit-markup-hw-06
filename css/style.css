@@ -4,7 +4,7 @@ subrayado*/
 
     --color-white: #FFF;
     --color-blue: #2196F3;
-    --color-black: #212121;
+    --color-black: #212121
     --color-grisc: #757575;
     --color-banner-footer: #2F303A;
     --color-back-gris: #F5F4FA;
@@ -14,6 +14,11 @@ subrayado*/
   a {
     text-decoration: none;
     color: var(--color-blue);
+  }
+
+  .item a{
+    text-decoration: none;
+    color: var(--color-black);
   }
 
   * {
@@ -38,7 +43,7 @@ subrayado*/
   .header {
     background-color: var(--color-white);
     width: 100%;
-    height: 98px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,13 +81,14 @@ subrayado*/
   }
 
   .item a:hover,
-  .item a:active {
-    color: var(--color-black);
+  .item a:active,
+  .item a.active {
+    color: var(--color-blue);
     border-bottom: 4px solid var(--color-blue);
   }
 
   .item a{
-    padding: 0 0 35px 0;
+    padding: 0 0 26px 0;
   }
 
   /* Menu 2*/
@@ -152,6 +158,7 @@ subrayado*/
     display: block;
     margin: 0 auto;
     padding: 10px 32px;
+    border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
@@ -169,6 +176,10 @@ subrayado*/
 
   .backdrop {
     position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     left: 0;
@@ -178,17 +189,16 @@ subrayado*/
   }
 
   .modal {
-    position: absolute;
     width: 528px;
     height: 581px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -20%);
     background-color: var(--color-white);
     border-radius: 4px;
     visibility: visible;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+
+  /*Formulario*/
 
 .form{
   padding: 0 40px 0 40px;
@@ -201,42 +211,106 @@ subrayado*/
   align-items: center;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 15px;
+  margin-bottom: 4px;
 }
 
-.box_form svg:hover{
-  stroke: var(--color-blue);
+.box_form input, textarea,
+.box_form input:active,
+.box_form input:focus {
+  border: none;
+  outline: none;
+}
+
+/*border cajas form*/
+.box_form:hover{
+  border: 1px solid #2196F3;
 }
 
 .vent_modal{
   width:448px;
   height: 40px;
-  border: none;
 }
 
-  .form h3{
+textarea{
+ padding: 12px 0px;
+ width:448px;
+ height: 100px;
+}
+
+.form h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23.44px;
+  align-items: center;
+}
+
+.form_label{
+  width: 44px;
+  height: 14px;
+  font-size: 12px;
+  line-height: 14.06px;
+  letter-spacing: 0.01em;
+  color: var(--color-grisc);
+}
+
+.acept{
+  align-content: flex-start;
+  margin: 10px 10px 0;
+}
+
+/*check*/
+#submit{
+  margin-right:8px;
+}
+
+.acept .form_label{
+ line-height: 24px;
+ font-size: 14px;
+}
+
+.button_form{
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 23.44px;
-    align-items: center;
-  }
-
-  .form_label{
-    width: 44px;
-    height: 14px;
-    font-size: 12px;
-    line-height: 14.06px;
-    letter-spacing: 0.01em;
-    color: var(--color-grisc);
-  }
-
-
-  .buttom_form{
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
     background-color: var(--color-blue);
     color: var(--color-white);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-  }
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+label .button_form{
+   margin: auto;
+   border:none;
+}
+
+
+.box_form svg:hover,
+.box_form svg:active,
+.box_form svg:focus {
+  fill: #2196F3;
+  stroke: #2196F3;
+  border: 1px solid var(--color-blue);
+}
+
+
+.for_button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.button_form:hover,
+.button_form:focus{
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+}
 
 
   /* Sección de texto en parrafos de inicio*/
@@ -542,6 +616,8 @@ subrayado*/
     color: var(--color-blue);
   }
 
+  /*Caja suscripción en el footer*/
+
   .subscription{
     margin: 55px 0 84px 60px;
   }
@@ -559,17 +635,41 @@ subrayado*/
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px, 4px, 4px) rgba(0, 0, 0, 0.15);
     background-color: var(--color-banner-footer);
+    cursor: pointer;
+  }
+
+  .email_footer:hover{
+  border: 1px solid var(--color-blue);
   }
 
   .submit_footer{
+    position:absolute;
     width: 200px;
     height: 50px;
+    line-height: 2;
     border-radius: 4px;
     color: var(--color-white);
     background-color: var(--color-blue);
     box-shadow: 0px 4px 4px 0px #00000026;
     border: none;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
   }
+
+  .submit_footer:hover,
+  .submit_footer:hover{
+    border: 1px solid var(--color-blue);
+  }
+
+  .submit_footer svg:hover{
+    align-items: center;
+  }
+
+
+  .submit_footer svg:hover{
+    border: 1px solid var(--color-blue);
+  }
+
 
 
   /* Portafolio */
@@ -686,7 +786,7 @@ subrayado*/
 
   .box-animation{
     position: absolute;
-    top: 0;
+    top: 140px;
     left: 0;
     width: 100%;
     height: 294px;
