@@ -4,11 +4,12 @@ subrayado*/
 
     --color-white: #FFF;
     --color-blue: #2196F3;
-    --color-black: #212121
+    --color-black: #212121;
     --color-grisc: #757575;
     --color-banner-footer: #2F303A;
     --color-back-gris: #F5F4FA;
     --color-banner-imagen: #2f303a66;
+    --color-logo-clientes: #AFB1B8;
   }
 
   a {
@@ -103,21 +104,25 @@ subrayado*/
     padding-left: 50px;
   }
 
+  .right svg {
+   fill: var(--color-grisc);
+  }
+
   .right > li svg:hover {
-    border: 1px solid var(--color-blue);
+    fill: var(--color-blue);
   }
 
   .contact {
     color: var(--color-grisc);
   }
 
-  .container .contact:hover {
+  .container .contact:hover{
     color: var(--color-blue);
     border-bottom: 4px solid var(--color-blue);
   }
 
   .container .contact {
-    padding: 0 0 35px 0;
+    padding: 0 0 26px 0;
   }
 
 
@@ -207,23 +212,27 @@ subrayado*/
 .box_form{
   box-sizing: border-box;
   display: flex;
-  border: 1px solid black;
   align-items: center;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 15px;
   margin-bottom: 4px;
+  cursor:pointer;
 }
 
 .box_form input, textarea,
 .box_form input:active,
+.box_form input.active
 .box_form input:focus {
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 /*border cajas form*/
-.box_form:hover{
+.box_form:hover,
+.box_form:active,
+.box_form.active{
   border: 1px solid #2196F3;
 }
 
@@ -253,6 +262,7 @@ textarea{
   line-height: 14.06px;
   letter-spacing: 0.01em;
   color: var(--color-grisc);
+  cursor: pointer;
 }
 
 .acept{
@@ -290,13 +300,12 @@ label .button_form{
    border:none;
 }
 
-
 .box_form svg:hover,
 .box_form svg:active,
 .box_form svg:focus {
   fill: #2196F3;
   stroke: #2196F3;
-  border: 1px solid var(--color-blue);
+ 
 }
 
 
@@ -541,14 +550,18 @@ label .button_form{
   }
 
   .icons-client {
+    background-color: #E5E5E5;
+    fill: var(--color-logo-clientes);
     margin-right: 30px;
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--color-logo-clientes);
   }
 
   .icons-client:hover,
   .icons-client:active {
+    fill: var(--color-blue);
     border: 1px solid var(--color-blue);
   }
+
 
   /* Footer */
 
@@ -664,7 +677,6 @@ label .button_form{
   .submit_footer svg:hover{
     align-items: center;
   }
-
 
   .submit_footer svg:hover{
     border: 1px solid var(--color-blue);
